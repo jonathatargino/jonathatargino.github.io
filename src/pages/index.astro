@@ -9,8 +9,6 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-console.log(posts.map((post) => post.data.pubDate))
-
 const postsMappedByYear = posts.reduce<Record<number, typeof posts>>((output, currentPost) => {
 	const postYear = currentPost.data.pubDate.getFullYear();
 	if (!output[postYear]) {
