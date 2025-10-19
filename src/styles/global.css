@@ -51,6 +51,8 @@ body {
 main {
   padding: 3em 0em;
   flex: 1;
+  max-width: 800px;
+  margin: auto;
 }
 h1,
 h2,
